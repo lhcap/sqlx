@@ -59,7 +59,7 @@ struct Patch {
 }
 
 /// Implementation of [`Arguments`] for PostgreSQL.
-#[derive(Default)]
+#[derive(Clone, Default)]
 pub struct PgArguments {
     // Types of each bind parameter
     pub(crate) types: Vec<PgTypeInfo>,
